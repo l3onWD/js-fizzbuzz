@@ -219,6 +219,20 @@ h3 {
     border-radius: 0 12px 12px 0;
 }
 
+.controls-toggler::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+
+    font: var(--fa-font-solid);
+    content: "\f013";
+}
+
+.is-open .controls-toggler::before {
+    content: "\f057";
+}
+
+
 /* Container */
 .controls-container {
     padding: 24px;

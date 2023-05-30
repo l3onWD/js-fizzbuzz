@@ -151,7 +151,9 @@ generateElem.addEventListener('click', function() {
 controlsTogglerElem.addEventListener('click', function() {
 
     // *** SHOW CONTROLS BAR ***//
-    controlsBarElem.classList.add('is-open');
+    controlsBarElem.classList.toggle('is-open');
+
+    console.log('----------- TOGGLING DONE -----------');
 });
 
 
@@ -166,4 +168,6 @@ resetElem.addEventListener('click', function(){
 
     // Remove cards
     deckElem.innerHTML = '';
+
+    console.log('----------- RESET DONE -----------');
 });
