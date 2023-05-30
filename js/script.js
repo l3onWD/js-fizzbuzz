@@ -35,72 +35,79 @@ console.log('Reset Button: ' + resetElem);
 console.log('Deck Container: ' + deckElem);
 
 
-// *** GET DEFAULT PARAMETERS ***//
-// Dividers
-let fizzDividerValue = parseInt(fizzDividerElem.value);
-let buzzDividerValue = parseInt(buzzDividerElem.value);
-// max Number
-let maxNumberValue = parseInt(maxNumberElem.value);
-
-// ! Log Parameters
-console.log('');
-console.log('# Parameters:');
-console.log('Fizz Divider: ' + fizzDividerValue);
-console.log('Buzz Divider: ' + buzzDividerValue);
-console.log('Max Numbers: ' + maxNumberValue);
-
-
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
 console.log('----------- LOGIC -----------');
 
 
-// ! Log List
-console.log('');
-console.log("# Fizz Buzz List:");
+// *** GENERATE BUTTON CLICK ***//
+generateElem.addEventListener('click', function(){
 
-// *** CREATE CARDS ***//
-let cards = '';
+    // *** GET PARAMETERS ***//
+    // Dividers
+    const fizzDividerValue = parseInt(fizzDividerElem.value);
+    const buzzDividerValue = parseInt(buzzDividerElem.value);
+    // max Number
+    const maxNumberValue = parseInt(maxNumberElem.value);
 
-for (let i = 1; i <= maxNumberValue; i++) {
-    
-    let currentValue = i;
-    let bgClass = 'bg-blue animate flip';
+    // ! Log Parameters
+    console.log('');
+    console.log('# Parameters:');
+    console.log('Fizz Divider: ' + fizzDividerValue);
+    console.log('Buzz Divider: ' + buzzDividerValue);
+    console.log('Max Numbers: ' + maxNumberValue);
 
-    // *** CHECK FIZZBUZZ DIVIDERS ***//
-    // FizzBuzz Check
-    if(!(currentValue % fizzDividerElem) && !(currentValue % buzzDividerElem)) {
+    // *** VALIDATION ***//
 
-        currentValue = 'FizzBuzz';
-        bgClass = 'bg-red animate spin-scale';
 
-    } // Fizz Check 
-    else if(!(currentValue % fizzDividerElem)) {
+    // ! Log List
+    console.log('');
+    console.log("# Fizz Buzz List:");
 
-        currentValue = 'Fizz';
-        bgClass = 'bg-green animate spin';
+    // *** CREATE CARDS ***//
+    let cards = '';
 
-    } // Buzz Check
-    else if(!(currentValue % buzzDividerElem)) {
+    for (let i = 1; i <= maxNumberValue; i++) {
+        
+        let currentValue = i;
+        let bgClass = 'bg-blue animate flip';
 
-        currentValue = 'Buzz';
-        bgClass = 'bg-yellow animate scale';
+        // *** CHECK FIZZBUZZ DIVIDERS ***//
+        // FizzBuzz Check
+        if(!(currentValue % fizzDividerValue) && !(currentValue % buzzDividerValue)) {
+
+            currentValue = 'FizzBuzz';
+            bgClass = 'bg-red animate spin-scale';
+
+        } // Fizz Check 
+        else if(!(currentValue % fizzDividerValue)) {
+
+            currentValue = 'Fizz';
+            bgClass = 'bg-green animate spin';
+
+        } // Buzz Check
+        else if(!(currentValue % buzzDividerValue)) {
+
+            currentValue = 'Buzz';
+            bgClass = 'bg-yellow animate scale';
+
+        }
+
+
+        // *** SAVE RESULT ***//
+        cards += `<div class="card ${bgClass}">${currentValue}</div>`;
+        
+        // ! Log Result
+        //console.log(currentValue);
 
     }
 
 
-    // *** SAVE RESULT ***//
-    cards += `<div class="card ${bgClass}">${currentValue}</div>`;
-    
-    // ! Log Result
-    //console.log(currentValue);
-
-}
+    // *** INSERT CARDS ***//
+    deckElem.innerHTML = cards;
 
 
-// *** INSERT CARDS ***//
-deckElem.innerHTML = cards;
+    console.log('----------- GENERATE DONE -----------');
+});
 
-
-console.log('----------- DONE -----------');
