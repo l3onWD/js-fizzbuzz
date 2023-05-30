@@ -31,6 +31,25 @@ console.log("Buzz Divider: " + buzzDivider);
 console.log("Max Numbers: " + maxNumber);
 
 
+// *** CONTROLS BAR ELEMENTS ***//
+const controlsBarElem = document.getElementById('controls-bar');
+const fizzDividerElem = document.getElementById('fizz-divider');
+const buzzDividerElem =  document.getElementById('buzz-divider');
+const maxNumberElem =  document.getElementById('max-number');
+const generateElem =  document.getElementById('controls-generate');
+const resetElem =  document.getElementById('controls-reset');
+
+// ! Log Elements
+console.log('');
+console.log("# Controls Bar Elements:");
+console.log("Container: " + controlsBarElem);
+console.log("Fizz Divider: " + fizzDividerElem);
+console.log("Buzz Divider: " + buzzDividerElem);
+console.log("Max Number: " + maxNumberElem);
+console.log("Generate Button: " + generateElem);
+console.log("Reset Button: " + resetElem);
+
+
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
@@ -74,7 +93,7 @@ for (let i = 1; i <= maxNumber; i++) {
     cards += `<div class="card ${bgClass}">${currentValue}</div>`;
     
     // ! Log Result
-    console.log(currentValue);
+    //console.log(currentValue);
 
 }
 

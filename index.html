@@ -21,7 +21,7 @@
     </head>
     <body>
 
-        <!-- Control Bar -->
+        <!-- Controls Bar -->
         <div id="controls-bar" class="is-open">
             
             <!-- Toggle Button -->
@@ -34,26 +34,26 @@
 
                 <!-- Fizz Divider -->
                 <div class="controls-field">
-                    <label for="" class="mr-2">Fizz Divider:</label>
-                    <input type="number" min="1" max="20" step="1" value="3">
+                    <label for="fizz-divider" class="mr-2">Fizz Divider:</label>
+                    <input id="fizz-divider" type="number" min="1" max="20" step="1" value="3">
                 </div>
 
                 <!-- Buzz Divider -->
                 <div class="controls-field">
-                    <label for="" class="mr-2">Buzz Divider:</label>
-                    <input type="number" min="1" max="20" step="1" value="5">
+                    <label for="buzz-divider" class="mr-2">Buzz Divider:</label>
+                    <input id="buzz-divider" type="number" min="1" max="20" step="1" value="5">
                 </div>
 
                 <!-- Card Number -->
                 <div class="controls-field">
-                    <label for="" class="mr-2">Cards Number:</label>
-                    <input type="number" min="10" max="500" step="1" value="100">
+                    <label for="max-number" class="mr-2">Cards Number:</label>
+                    <input id="max-number" type="number" min="10" max="500" step="1" value="100">
                 </div>
 
                 <!-- Actions -->
                 <div>
-                    <button class="btn btn-success mr-2">Generate</button>
-                    <button class="btn btn-danger">Reset</button>
+                    <button id="controls-generate" class="btn btn-success mr-2">Generate</button>
+                    <button id="controls-reset" class="btn btn-danger">Reset</button>
                 </div>
 
             </div>
