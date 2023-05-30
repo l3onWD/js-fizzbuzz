@@ -137,6 +137,49 @@ h1 {
 }
 
 
+/*** CONTROL BAR ***/
+#controls-bar {
+    position: fixed;
+    top: 50px;
+    right: 100%;
+}
+
+#controls-bar.is-open {
+    right: auto;
+    left: 0;
+}
+
+/* Toggler */
+.controls-toggler {
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    padding: 12px 8px;
+    background-color: #fff;
+    border-radius: 0 12px 12px 0;
+}
+
+/* Container */
+.controls-container {
+    padding: 24px;
+    background-color: #fff;
+}
+
+/* Fields */
+.controls-container > div {
+    margin-bottom: 1.5rem;
+}
+
+
 /* -----------------------------------------
 ? RESPONSIVE
 -------------------------------------------*/
