@@ -163,4 +163,7 @@ resetElem.addEventListener('click', function(){
     fizzDividerElem.value = '3';
     buzzDividerElem.value =  '5';
     maxNumberElem.value =  '100';
+
+    // Remove cards
+    deckElem.innerHTML = '';
 });
