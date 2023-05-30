@@ -43,11 +43,20 @@ const buzzDivider = 5;
 // Numbers
 const maxNumber = 100;
 
+// ! Log Parameters
+console.log("# Parameters:");
+console.log("Fizz Divider: " + fizzDivider);
+console.log("Buzz Divider: " + buzzDivider);
+console.log("Max Numbers: " + maxNumber);
+
 
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
 console.log('----------- LOGIC -----------');
+
+// ! Log List
+console.log("# Fizz Buzz List:");
 
 
 // *** LOOP NUMBERS ***//
@@ -65,9 +74,11 @@ for (let i = 1; i <= maxNumber; i++) {
     }
 
 
+    // *** PRINT RESULT ***//
+    // ! Log Result
+    console.log(currentNumber);
 
 }
-
 
 
 console.log('----------- DONE -----------');
