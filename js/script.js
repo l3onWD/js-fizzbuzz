@@ -63,26 +63,33 @@ console.log('----------- LOGIC -----------');
 console.log("# Fizz Buzz List:");
 
 
-// *** LOOP NUMBERS ***//
+// *** CREATE DECK ***//
+
+let cards = '';
+
 for (let i = 1; i <= maxNumber; i++) {
     
-    let currentNumber = i;
+    let currentValue = i;
 
     // *** CHECK FIZZBUZZ DIVIDERS ***//
-    if(!(currentNumber % fizzDivider) && !(currentNumber % buzzDivider)) {
-        currentNumber = 'FizzBuzz';
-    } else if(!(currentNumber % fizzDivider)) {
-        currentNumber = 'Fizz';
-    } else if(!(currentNumber % buzzDivider)) {
-        currentNumber = 'Buzz';
+    if(!(currentValue % fizzDivider) && !(currentValue % buzzDivider)) {
+        currentValue = 'FizzBuzz';
+    } else if(!(currentValue % fizzDivider)) {
+        currentValue = 'Fizz';
+    } else if(!(currentValue % buzzDivider)) {
+        currentValue = 'Buzz';
     }
 
 
-    // *** PRINT RESULT ***//
+    // *** SAVE RESULT ***//
+    cards += `<div>${currentValue}</div>`;
     // ! Log Result
     //console.log(currentNumber);
 
 }
+
+// ! Log Cards
+console.log(cards);
 
 
 console.log('----------- DONE -----------');
