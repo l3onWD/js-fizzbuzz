@@ -43,6 +43,10 @@ const buzzDivider = 5;
 // Numbers
 const maxNumber = 100;
 
+
+// *** DOM ELEMENTS ***//
+const deckElem = document.getElementById('deck');
+
 // ! Log Parameters
 console.log("# Parameters:");
 console.log("Fizz Divider: " + fizzDivider);
@@ -76,7 +80,7 @@ for (let i = 1; i <= maxNumber; i++) {
 
     // *** PRINT RESULT ***//
     // ! Log Result
-    console.log(currentNumber);
+    //console.log(currentNumber);
 
 }
 
