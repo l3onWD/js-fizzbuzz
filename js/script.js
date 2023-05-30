@@ -69,9 +69,6 @@ resetElem.addEventListener('click', function(){
     buzzDividerElem.value =  '5';
     maxNumberElem.value =  '100';
 
-    // Remove cards
-    deckElem.innerHTML = '';
-
     console.log('----------- RESET DONE -----------');
 });
 

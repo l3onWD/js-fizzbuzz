@@ -67,6 +67,7 @@ h3 {
     padding: 0 var(--layout-gap);
 }
 
+
 /*** COLORS ***/
 .bg-red {
     background-color: var(--col-red);
@@ -233,7 +234,6 @@ h3 {
     content: "\f057";
 }
 
-
 /* Container */
 .controls-container {
     padding: 24px;
@@ -263,6 +263,7 @@ h3 {
     }
 }
 
+
 /*** MEDIA MD ***/
 @media screen and (min-width: 768px) {
     .container {
@@ -270,12 +271,14 @@ h3 {
     }
 }
 
+
 /*** MEDIA LG ***/
 @media screen and (min-width: 992px) {
     .container {
         max-width: var(--container-lg);
     }
 }
+
 
 /*** MEDIA XL ***/
 @media screen and (min-width: 1200px) {
