@@ -35,7 +35,11 @@ console.log('JS OK!');// Check if JS is linked to the page
 console.log('----------- INIT -----------');
 
 
-// ***  ***//
+// *** DATA ***//
+const fizzDivider = 3;
+const buzzDivider = 5;
+
+const maxNumber = 100;
 
 
 /* -----------------------------------------
