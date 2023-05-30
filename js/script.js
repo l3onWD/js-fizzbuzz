@@ -12,23 +12,8 @@ console.log('JS OK!');// Check if JS is linked to the page
 console.log('----------- INIT -----------');
 
 
-// *** PARAMETERS ***//
-// Dividers
-const fizzDivider = 3;
-const buzzDivider = 5;
-
-// Numbers
-const maxNumber = 100;
-
-
 // *** DOM ELEMENTS ***//
 const deckElem = document.getElementById('deck');
-
-// ! Log Parameters
-console.log("# Parameters:");
-console.log("Fizz Divider: " + fizzDivider);
-console.log("Buzz Divider: " + buzzDivider);
-console.log("Max Numbers: " + maxNumber);
 
 
 // *** CONTROLS BAR ELEMENTS ***//
@@ -55,33 +40,49 @@ console.log("Reset Button: " + resetElem);
 -------------------------------------------*/
 console.log('----------- LOGIC -----------');
 
-// ! Log List
-console.log("# Fizz Buzz List:");
 
+// *** GET USER INPUTS ***//
+// Dividers
+const fizzDividerValue = parseInt(fizzDividerElem.value);
+const buzzDividerValue = parseInt(buzzDividerElem.value);
+// max Number
+const maxNumberValue = parseInt(maxNumberElem.value);
+
+// ! Log User Inputs
+console.log('');
+console.log("# User Inputs:");
+console.log("Fizz Divider: " + fizzDividerValue);
+console.log("Buzz Divider: " + buzzDividerValue);
+console.log("Max Numbers: " + maxNumberValue);
+
+
+// ! Log List
+console.log('');
+console.log("# Fizz Buzz List:");
 
 // *** CREATE CARDS ***//
 let cards = '';
 
-for (let i = 1; i <= maxNumber; i++) {
+for (let i = 1; i <= maxNumberValue; i++) {
     
     let currentValue = i;
     let bgClass = 'bg-blue animate flip';
 
     // *** CHECK FIZZBUZZ DIVIDERS ***//
     // FizzBuzz Check
-    if(!(currentValue % fizzDivider) && !(currentValue % buzzDivider)) {
+    if(!(currentValue % fizzDividerElem) && !(currentValue % buzzDividerElem)) {
 
         currentValue = 'FizzBuzz';
         bgClass = 'bg-red animate spin-scale';
 
     } // Fizz Check 
-    else if(!(currentValue % fizzDivider)) {
+    else if(!(currentValue % fizzDividerElem)) {
 
         currentValue = 'Fizz';
         bgClass = 'bg-green animate spin';
 
     } // Buzz Check
-    else if(!(currentValue % buzzDivider)) {
+    else if(!(currentValue % buzzDividerElem)) {
 
         currentValue = 'Buzz';
         bgClass = 'bg-yellow animate scale';
