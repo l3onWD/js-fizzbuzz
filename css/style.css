@@ -1,1 +1,34 @@
+/* -----------------------------------------
+* VARIABLES
+-------------------------------------------*/
+:root {
+    --col-darkblue: #083b4c;
+    --col-red: #f0466f;
+    --col-green: #0bd6a1;
+    --col-blue: #1389b2;
+    --col-yellow: #ffd166;
+}
 
+
+/* -----------------------------------------
+* RESET
+-------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+* GENERICS
+-------------------------------------------*/
+body {
+    background-color: var(--col-darkblue);
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+}
