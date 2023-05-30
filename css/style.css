@@ -197,13 +197,14 @@ h3 {
 #controls-bar {
     position: fixed;
     top: 150px;
-    right: 100%;
+    left: -400px;
+    width: 400px;
 
+    transition: left 0.5s;
     z-index: 1;
 }
 
 #controls-bar.is-open {
-    right: auto;
     left: 0;
 }
 
