@@ -1,15 +1,15 @@
 /* -----------------------------------------
 ! DEBUG
 -------------------------------------------*/
-.db.border {
+.db-border {
     border: 2px dashed #000;
 }
 
-.db.h-1x {
+.db-h-1x {
     min-height: 100px;
 }
 
-.db.h-2x {
+.db-h-2x {
     min-height: 500px;
 }
 
