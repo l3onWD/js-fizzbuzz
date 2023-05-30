@@ -190,7 +190,7 @@ h3 {
 /*** CONTROL BAR ***/
 #controls-bar {
     position: fixed;
-    top: 50px;
+    top: 150px;
     right: 100%;
 
     z-index: 1;

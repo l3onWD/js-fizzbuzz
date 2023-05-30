@@ -15,6 +15,7 @@ console.log('----------- INIT -----------');
 // *** DOM ELEMENTS ***//
 // Controls Bar
 const controlsBarElem = document.getElementById('controls-bar');
+const controlsTogglerElem = document.querySelector('.controls-toggler');
 const fizzDividerElem = document.getElementById('fizz-divider');
 const buzzDividerElem =  document.getElementById('buzz-divider');
 const maxNumberElem =  document.getElementById('max-number');
@@ -27,6 +28,7 @@ const deckElem = document.getElementById('deck');
 console.log('');
 console.log('# DOM Elements:');
 console.log('Container: ' + controlsBarElem);
+console.log('Toggler: ' + controlsTogglerElem);
 console.log('Fizz Divider: ' + fizzDividerElem);
 console.log('Buzz Divider: ' + buzzDividerElem);
 console.log('Max Number: ' + maxNumberElem);
@@ -108,6 +110,16 @@ generateElem.addEventListener('click', function(){
     deckElem.innerHTML = cards;
 
 
+    // *** HIDE CONTROLS BAR ***//
+    controlsBarElem.classList.remove('is-open');
+
+
     console.log('----------- GENERATE DONE -----------');
 });
 
+
+// *** TOGGLER BUTTON CLICK ***//
+controlsTogglerElem.addEventListener('click', function(){
+    // *** SHOW CONTROLS BAR ***//
+    controlsBarElem.classList.add('is-open');
+});
