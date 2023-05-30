@@ -61,6 +61,35 @@ generateElem.addEventListener('click', function() {
     console.log('Max Numbers: ' + maxNumberValue);
 
     // *** VALIDATION ***//
+    let isValid = true;
+
+    // Reset validation style
+    fizzDividerElem.classList.remove('is-invalid');
+    buzzDividerElem.classList.remove('is-invalid');
+    maxNumberElem.classList.remove('is-invalid');
+
+    // Check Fizz Divider
+    if (isNaN(fizzDividerValue) || fizzDividerValue < 1) {
+        isValid = false;
+        fizzDividerElem.classList.add('is-invalid');
+    }
+
+    // Check Buzz Divider
+    if (isNaN(buzzDividerValue) || buzzDividerValue < 1) {
+        isValid = false;
+        buzzDividerElem.classList.add('is-invalid');
+    }
+
+    // Check Max Number
+    if (isNaN(maxNumberValue) || maxNumberValue < 1) {
+        isValid = false;
+        maxNumberElem.classList.add('is-invalid');
+    }
+
+    // Terminate control
+    if(!isValid) {
+        return;
+    }
 
 
     // ! Log List
