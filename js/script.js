@@ -44,7 +44,7 @@ console.log('----------- LOGIC -----------');
 
 
 // *** GENERATE BUTTON CLICK ***//
-generateElem.addEventListener('click', function(){
+generateElem.addEventListener('click', function() {
 
     // *** GET PARAMETERS ***//
     // Dividers
@@ -119,7 +119,19 @@ generateElem.addEventListener('click', function(){
 
 
 // *** TOGGLER BUTTON CLICK ***//
-controlsTogglerElem.addEventListener('click', function(){
+controlsTogglerElem.addEventListener('click', function() {
+
     // *** SHOW CONTROLS BAR ***//
     controlsBarElem.classList.add('is-open');
+});
+
+
+// *** RESET BUTTON CLICK ***//
+resetElem.addEventListener('click', function(){
+
+    // *** RESET INPUTS ***//
+    // Reset to default
+    fizzDividerElem.value = '3';
+    buzzDividerElem.value =  '5';
+    maxNumberElem.value =  '100';
 });
