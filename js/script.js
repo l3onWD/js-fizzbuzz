@@ -35,10 +35,12 @@ console.log('JS OK!');// Check if JS is linked to the page
 console.log('----------- INIT -----------');
 
 
-// *** DATA ***//
+// *** PARAMETERS ***//
+// Dividers
 const fizzDivider = 3;
 const buzzDivider = 5;
 
+// Numbers
 const maxNumber = 100;
 
 
@@ -47,6 +49,24 @@ const maxNumber = 100;
 -------------------------------------------*/
 console.log('----------- LOGIC -----------');
 
+
+// *** LOOP NUMBERS ***//
+for (let i = 1; i <= maxNumber; i++) {
+    
+    let currentNumber = i;
+
+    // *** CHECK FIZZBUZZ DIVIDERS ***//
+    if(!(currentNumber % fizzDivider) && !(currentNumber % buzzDivider)) {
+        currentNumber = 'FizzBuzz';
+    } else if(!(currentNumber % fizzDivider)) {
+        currentNumber = 'Fizz';
+    } else if(!(currentNumber % buzzDivider)) {
+        currentNumber = 'Buzz';
+    }
+
+
+
+}
 
 
 
