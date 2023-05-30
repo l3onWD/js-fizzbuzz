@@ -63,8 +63,7 @@ console.log('----------- LOGIC -----------');
 console.log("# Fizz Buzz List:");
 
 
-// *** CREATE DECK ***//
-
+// *** CREATE CARDS ***//
 let cards = '';
 
 for (let i = 1; i <= maxNumber; i++) {
@@ -82,14 +81,18 @@ for (let i = 1; i <= maxNumber; i++) {
 
 
     // *** SAVE RESULT ***//
-    cards += `<div>${currentValue}</div>`;
+    cards += `<div class="card">${currentValue}</div>`;
     // ! Log Result
     //console.log(currentNumber);
 
 }
 
+
+// *** INSERT CARDS ***//
+deckElem.innerHTML = cards;
+
 // ! Log Cards
-console.log(cards);
+//console.log(cards);
 
 
 console.log('----------- DONE -----------');
