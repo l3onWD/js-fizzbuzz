@@ -11,6 +11,11 @@
 
     /* layout */
     --layout-gap: 10px;
+
+    --container-sm: 540px;
+    --container-md: 720px;
+    --container-lg: 960px;
+    --container-xl: 1140px;
 }
 
 
@@ -46,10 +51,8 @@ h1 {
 -------------------------------------------*/
 /*** MISC ***/
 .container {
-    max-width: 600px;
-
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--layout-gap);
 }
 
 /*** COLORS ***/
@@ -95,4 +98,36 @@ h1 {
     font-size: 1.5rem;
     border-radius: 10px;
     
+}
+
+
+/* -----------------------------------------
+? RESPONSIVE
+-------------------------------------------*/
+/*** MEDIA SM ***/
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: var(--container-sm);
+    }
+}
+
+/*** MEDIA MD ***/
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: var(--container-md);
+    }
+}
+
+/*** MEDIA LG ***/
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: var(--container-lg);
+    }
+}
+
+/*** MEDIA XL ***/
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: var(--container-xl);
+    }
 }
