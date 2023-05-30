@@ -2,11 +2,15 @@
 * VARIABLES
 -------------------------------------------*/
 :root {
+    /* palette */
     --col-darkblue: #083b4c;
     --col-red: #f0466f;
     --col-green: #0bd6a1;
     --col-blue: #1389b2;
     --col-yellow: #ffd166;
+
+    /* layout */
+    --layout-gap: 20px;
 }
 
 
@@ -31,4 +35,38 @@ body {
 h1 {
     font-size: 4rem;
     color: #fff;
+}
+
+
+/* -----------------------------------------
+* UTILITY
+-------------------------------------------*/
+.container {
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* -----------------------------------------
+? ELEMENTS
+-------------------------------------------*/
+
+/*** CARDS ***/
+/* Deck */
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card */
+.card-deck .card {
+    padding: 0 var(--layout-gap);
+    background-color: var(--col-green);
+
+    /*TODO delete*/
+    width: 100px;
+    height: 100px;
 }
