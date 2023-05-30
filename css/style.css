@@ -73,6 +73,40 @@ h1 {
 }
 
 
+/*** ANIMATIONS ***/
+.animate {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Scale */
+.animate.scale:hover {
+    transform: scale(1.5);
+}
+
+/* Spin */
+.animate.spin {
+    transition-duration: 1s;
+}
+
+.animate.spin:hover {
+    transform: rotate(1turn);
+}
+
+/* Spin And Scale */
+.animate.spin-scale:hover {
+    transform: rotate(1turn) scale(1.5);
+}
+
+/* Flip */
+.animate.flip {
+    transition-duration: 1s;
+}
+
+.animate.flip:hover {
+    transform: rotate3d(0, -1, 0, 0.5turn);
+}
+
+
 /* -----------------------------------------
 ? ELEMENTS
 -------------------------------------------*/
@@ -97,6 +131,8 @@ h1 {
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 10px;
+
+    cursor: pointer;
     
 }
 

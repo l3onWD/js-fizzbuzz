@@ -46,26 +46,26 @@ let cards = '';
 for (let i = 1; i <= maxNumber; i++) {
     
     let currentValue = i;
-    let bgClass = 'bg-blue';
+    let bgClass = 'bg-blue animate flip';
 
     // *** CHECK FIZZBUZZ DIVIDERS ***//
     // FizzBuzz Check
     if(!(currentValue % fizzDivider) && !(currentValue % buzzDivider)) {
 
         currentValue = 'FizzBuzz';
-        bgClass = 'bg-red';
+        bgClass = 'bg-red animate spin-scale';
 
     } // Fizz Check 
     else if(!(currentValue % fizzDivider)) {
 
         currentValue = 'Fizz';
-        bgClass = 'bg-green';
+        bgClass = 'bg-green animate spin';
 
     } // Buzz Check
     else if(!(currentValue % buzzDivider)) {
 
         currentValue = 'Buzz';
-        bgClass = 'bg-yellow';
+        bgClass = 'bg-yellow animate scale';
 
     }
 
