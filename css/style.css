@@ -219,6 +219,7 @@ h3 {
     border-radius: 0 12px 12px 0;
 }
 
+/* Toggler icon */
 .controls-toggler::before {
     display: inline-block;
     text-rendering: auto;

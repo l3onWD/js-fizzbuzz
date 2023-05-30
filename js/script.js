@@ -42,9 +42,45 @@ console.log('Deck Container: ' + deckElem);
 -------------------------------------------*/
 console.log('----------- LOGIC -----------');
 
+// *** GENERATE STARTING CARDS ***//
+generateCards();
 
-// *** GENERATE BUTTON CLICK ***//
-generateElem.addEventListener('click', function() {
+
+// *** CLICK GENERATE BUTTON ***//
+generateElem.addEventListener('click', generateCards);
+
+
+// *** CLICK TOGGLER BUTTON ***//
+controlsTogglerElem.addEventListener('click', function() {
+
+    // *** SHOW CONTROLS BAR ***//
+    controlsBarElem.classList.toggle('is-open');
+
+    console.log('----------- TOGGLING DONE -----------');
+});
+
+
+// *** CLICK RESET BUTTON ***//
+resetElem.addEventListener('click', function(){
+
+    // *** RESET INPUTS ***//
+    // Reset to default
+    fizzDividerElem.value = '3';
+    buzzDividerElem.value =  '5';
+    maxNumberElem.value =  '100';
+
+    // Remove cards
+    deckElem.innerHTML = '';
+
+    console.log('----------- RESET DONE -----------');
+});
+
+
+/* -----------------------------------------
+* FUNCTIONS
+-------------------------------------------*/
+
+function generateCards() {
 
     // *** GET PARAMETERS ***//
     // Dividers
@@ -130,7 +166,7 @@ generateElem.addEventListener('click', function() {
         cards += `<div class="card ${bgClass}">${currentValue}</div>`;
         
         // ! Log Result
-        //console.log(currentValue);
+        console.log(currentValue);
 
     }
 
@@ -144,30 +180,4 @@ generateElem.addEventListener('click', function() {
 
 
     console.log('----------- GENERATE DONE -----------');
-});
-
-
-// *** TOGGLER BUTTON CLICK ***//
-controlsTogglerElem.addEventListener('click', function() {
-
-    // *** SHOW CONTROLS BAR ***//
-    controlsBarElem.classList.toggle('is-open');
-
-    console.log('----------- TOGGLING DONE -----------');
-});
-
-
-// *** RESET BUTTON CLICK ***//
-resetElem.addEventListener('click', function(){
-
-    // *** RESET INPUTS ***//
-    // Reset to default
-    fizzDividerElem.value = '3';
-    buzzDividerElem.value =  '5';
-    maxNumberElem.value =  '100';
-
-    // Remove cards
-    deckElem.innerHTML = '';
-
-    console.log('----------- RESET DONE -----------');
-});
+}
