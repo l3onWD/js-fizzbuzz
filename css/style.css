@@ -44,11 +44,29 @@ h1 {
 /* -----------------------------------------
 * UTILITY
 -------------------------------------------*/
+/*** MISC ***/
 .container {
     max-width: 600px;
 
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/*** COLORS ***/
+.bg-red {
+    background-color: var(--col-red);
+}
+
+.bg-green {
+    background-color: var(--col-green);
+}
+
+.bg-blue {
+    background-color: var(--col-blue);
+}
+
+.bg-yellow {
+    background-color: var(--col-yellow);
 }
 
 
@@ -73,7 +91,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--col-green);
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 10px;

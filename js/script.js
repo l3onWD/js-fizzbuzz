@@ -69,30 +69,41 @@ let cards = '';
 for (let i = 1; i <= maxNumber; i++) {
     
     let currentValue = i;
+    let bgClass = 'bg-blue';
 
     // *** CHECK FIZZBUZZ DIVIDERS ***//
+    // FizzBuzz Check
     if(!(currentValue % fizzDivider) && !(currentValue % buzzDivider)) {
+
         currentValue = 'FizzBuzz';
-    } else if(!(currentValue % fizzDivider)) {
+        bgClass = 'bg-red';
+
+    } // Fizz Check 
+    else if(!(currentValue % fizzDivider)) {
+
         currentValue = 'Fizz';
-    } else if(!(currentValue % buzzDivider)) {
+        bgClass = 'bg-green';
+
+    } // Buzz Check
+    else if(!(currentValue % buzzDivider)) {
+
         currentValue = 'Buzz';
+        bgClass = 'bg-yellow';
+
     }
 
 
     // *** SAVE RESULT ***//
-    cards += `<div class="card">${currentValue}</div>`;
+    cards += `<div class="card ${bgClass}">${currentValue}</div>`;
+    
     // ! Log Result
-    //console.log(currentNumber);
+    console.log(currentValue);
 
 }
 
 
 // *** INSERT CARDS ***//
 deckElem.innerHTML = cards;
-
-// ! Log Cards
-//console.log(cards);
 
 
 console.log('----------- DONE -----------');
