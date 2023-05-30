@@ -144,12 +144,21 @@ h3 {
     border-color: var(--col-gray);
 }
 
+/* Colors */
 .btn-success {
     background-color: var(--col-green);
 }
 
+.btn-success:hover {
+    background-color: #0df2b5;
+}
+
+
 .btn-danger {
     background-color: var(--col-red);
+}
+.btn-danger:hover {
+    background-color: #f47190;
 }
 
 
