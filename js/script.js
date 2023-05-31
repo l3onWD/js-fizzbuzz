@@ -53,8 +53,9 @@ generateElem.addEventListener('click', generateCards);
 // *** CLICK TOGGLER BUTTON ***//
 controlsTogglerElem.addEventListener('click', function() {
 
-    // *** SHOW CONTROLS BAR ***//
+    // *** TOGGLE CONTROLS BAR ***//
     controlsBarElem.classList.toggle('is-open');
+
 
     console.log('----------- TOGGLING DONE -----------');
 });
@@ -68,6 +69,7 @@ resetElem.addEventListener('click', function(){
     fizzDividerElem.value = '3';
     buzzDividerElem.value =  '5';
     maxNumberElem.value =  '100';
+
 
     console.log('----------- RESET DONE -----------');
 });
@@ -92,6 +94,7 @@ function generateCards() {
     console.log('Fizz Divider: ' + fizzDividerValue);
     console.log('Buzz Divider: ' + buzzDividerValue);
     console.log('Max Numbers: ' + maxNumberValue);
+
 
     // *** VALIDATION ***//
     let isValid = true;
@@ -129,6 +132,7 @@ function generateCards() {
     console.log('');
     console.log("# Fizz Buzz List:");
 
+
     // *** CREATE CARDS ***//
     let cards = '';
 
@@ -137,6 +141,7 @@ function generateCards() {
         let currentValue = i;
         let bgClass = 'bg-blue animate flip';
 
+        
         // *** CHECK FIZZBUZZ DIVIDERS ***//
         // FizzBuzz Check
         if(!(currentValue % fizzDividerValue) && !(currentValue % buzzDividerValue)) {
